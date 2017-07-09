@@ -1,0 +1,19 @@
+security:
+  basic:
+    enabled: true
+  user:
+    name: miaozhihao
+    password: 123456
+server:
+  port: 8761
+eureka:
+  instance:
+    hostname: peer1
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+     defaultZone: http://miaozhihao:123456@peer2:8762/eureka/
+spring:
+  application:
+    name: eurekasevice-server

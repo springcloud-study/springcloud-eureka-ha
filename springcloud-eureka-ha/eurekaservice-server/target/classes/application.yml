@@ -1,0 +1,16 @@
+security:
+  basic:
+    enabled: true
+  user:
+    name: miaozhihao
+    password: 123456
+server:
+  port: 8761
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+     defaultZone: http://miaozhihao:123456@${eureka.instance.hostname}:${server.port}/eureka/

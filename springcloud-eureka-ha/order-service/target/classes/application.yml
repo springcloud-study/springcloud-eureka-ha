@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: order-service
+eureka:
+  client:
+    service-url:
+     defaultZone: http://miaozhihao:123456@peer1:8761/eureka,http://miaozhihao:123456@peer2:8762/eureka/
+  instance:
+    instance-id:  ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
+server:
+  port: 9090
+user:
+  service:
+    url: http://user-service
